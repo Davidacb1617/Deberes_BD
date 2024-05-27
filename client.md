@@ -13,7 +13,6 @@ credit_limit DECIMAL (7,2),
 PRIMARY KEY(id)
 );
 ```
-<img src="./capturas/1.jpg" alt="sentencia"/>
 
 ### Inserción de Datos
 
@@ -44,21 +43,21 @@ VALUES
 ```
 ## 1. Contar registros existentes en el campo "fullname"
 Para mostrar todos los registros existentes en este campo, usamos la función **COUNT ()** pasandole como parametro el campo "*fullname*"
-![image](https://github.com/Davidacb1617/Relational_Model_Events/assets/146010796/7a8fcdb5-1e24-4b2f-849f-3ade498da148)
+<img src="./capturas/TC1.jfif" alt="sentencia1"/>
 ## 2. Contar registros existentes en el campo "phone"
 Para mostrar todos los registros existentes en este campo, usamos la función **COUNT ()** pasandole como parametro el campo "*phone*"
-![image](https://github.com/Davidacb1617/Relational_Model_Events/assets/146010796/b78f95c3-21c9-4c84-b635-05c536186c75)
-## 3. Contar registros existentes en el campo "fullname" y "phone"
+<img src="./capturas/TC2.jfif" alt="sentencia2"/>
+## 3. Contar registros existentes en los campos "fullname" y "phone"
 Para mostrar todos los registros existentes en los campos, usamos la función **COUNT ()** pasandole como parametro los campos "*phone*" y "*fullname*"
-![image](https://github.com/Davidacb1617/Relational_Model_Events/assets/146010796/953ac0b9-8d13-4a45-990b-067aef91fd4c)
-## 4. Contar registros existentes en el campo "phone", "fullname" y todos los registros de la tabla
+<img src="./capturas/TC3.jfif" alt="sentencia3"/>
+## 4. Contar registros existentes en los campos "phone", "fullname" y todos los registros de la tabla
 Para mostrar todos los registros existentes en los campos, usamos la función **COUNT ()** pasandole como parametro los campos "*phone*", "*fullname*" y "**\***" para obtener todos los registros dentro de la tabla
-![image](https://github.com/Davidacb1617/Relational_Model_Events/assets/146010796/32605acd-f088-41ca-93c1-ee293f931d64)
+<img src="./capturas/TC4.jfif" alt="sentencia4"/>
 ## 5. Contar registros existentes en el campo "city"
 Para mostrar todos los registros existentes en este campo, usamos la función **COUNT ()** pasandole como parametro el campo "*city*"
-![image](https://github.com/Davidacb1617/Relational_Model_Events/assets/146010796/b56bcce5-af27-467d-bcc0-1fcc239d7e6d)
+<img src="./capturas/TC5.jfif" alt="sentencia5"/>
 ## 6. Contar todas las ciudades existentes en el campo "city"
 Para mostrar todos los registros existentes en este campo, usamos la función **COUNT (DISTINCT)** pasandole como parametro el campo "*city*". Esto lo hicimos para obtener las ciudades que existen en los registros, para que no se repita la ciudad
-![image](https://github.com/Davidacb1617/Relational_Model_Events/assets/146010796/07dcf765-fbfc-475e-b093-f76cee1a574c)
+<img src="./capturas/TC6.jfif" alt="sentencia6"/>
 
 
