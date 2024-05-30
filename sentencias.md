@@ -8,7 +8,7 @@ WHERE hour BETWEEN '10:00:00' AND '14:00:00'
 ORDER BY day ASC;
 ```
 
-![Imagen 1](capturas/5.jpg)
+![Imagen 1](capturas/1.jpg)
 
 Esta sentencia SQL selecciona todas las columnas de la tabla `conference` donde la hora (`hour`) está entre las 10:00 y las 14:00. Los resultados se ordenan de forma ascendente por la columna `day`.
 
@@ -20,7 +20,7 @@ WHERE assisted = true
 ORDER BY registered_at ASC;
 ```
 
-![Imagen 2](capturas/4.jpg)
+![Imagen 2](capturas/2.jpg)
 
 Esta consulta selecciona todas las columnas de la tabla `register` donde el valor de la columna `assisted` es `true`. Los resultados se ordenan de forma ascendente por la columna `registered_at`.
 
@@ -42,7 +42,7 @@ SELECT * FROM conference
 ORDER BY title ASC;
 ```
 
-![Imagen 4](capturas/2.jpg)
+![Imagen 4](capturas/4.jpg)
 
 Esta consulta selecciona todas las columnas de la tabla `conference` y ordena los resultados de forma ascendente según la columna `title`.
 
@@ -54,6 +54,6 @@ WHERE city = 'San Francisco'
 ORDER BY start_date ASC;
 ```
 
-![Imagen 5](capturas/1.jpg)
+![Imagen 5](capturas/5.jpg)
 
 Esta consulta selecciona todas las columnas de la tabla `event` donde la ciudad (`city`) es 'San Francisco'. Los resultados se ordenan de forma ascendente por la columna `start_date`.
