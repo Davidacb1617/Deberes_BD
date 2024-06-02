@@ -1,59 +1,89 @@
-# Tarea TAS7 - Events
+# Tarea TAS8 - Views
 
-## 1. Listar por hora y día
+## 1. Contar el número de productos de una categoría específica
 
 ```sql
-SELECT * FROM conference
-WHERE hour BETWEEN '10:00:00' AND '14:00:00'
-ORDER BY day ASC;
+SELECT COUNT(*) FROM product
+WHERE category = 'Electronics';
 ```
 
 ![Imagen 1](capturas/1.jpg)
 
-Esta sentencia SQL selecciona todas las columnas de la tabla `conference` donde la hora (`hour`) está entre las 10:00 y las 14:00. Los resultados se ordenan de forma ascendente por la columna `day`.
+Esta consulta cuenta el número de productos en la tabla `product` donde la categoría (`category`) es 'Electronics'.
 
-## 2. Listar asistencia y registro de los miembros
+## 2. Contar el número de clientes en una ciudad específica
 
 ```sql
-SELECT * FROM register
-WHERE assisted = true
-ORDER BY registered_at ASC;
+SELECT COUNT(*) FROM client
+WHERE city = 'New York';
 ```
 
 ![Imagen 2](capturas/2.jpg)
 
-Esta consulta selecciona todas las columnas de la tabla `register` donde el valor de la columna `assisted` es `true`. Los resultados se ordenan de forma ascendente por la columna `registered_at`.
+Esta consulta cuenta el número de clientes en la tabla `client` donde la ciudad (`city`) es 'New York'.
 
-## 3. Listar eventos con 200 o más personas
+## 3. Contar el número de productos cuyo precio está dentro de un rango específico
 
 ```sql
-SELECT * FROM event
-WHERE total_attendees >= 200;
+SELECT COUNT(*) FROM product
+WHERE price BETWEEN 100 AND 700;
 ```
 
 ![Imagen 3](capturas/3.jpg)
 
-Esta consulta selecciona todas las columnas de la tabla `event` donde el número total de asistentes (`total_attendees`) es mayor o igual a 200.
+Esta consulta cuenta el número de productos en la tabla `product` donde el precio (`price`) está entre 100 y 700.
 
-## 4. Ordenar alfabeticamente el título de las conferencias
+## 4. Seleccionar clientes que viven en una ciudad específica y tienen un tipo de cliente específico
 
 ```sql
-SELECT * FROM conference
-ORDER BY title ASC;
+SELECT * FROM client
+WHERE city = 'San Antonio' AND type_of_client = 'VIP';
 ```
 
 ![Imagen 4](capturas/4.jpg)
 
-Esta consulta selecciona todas las columnas de la tabla `conference` y ordena los resultados de forma ascendente según la columna `title`.
+Esta consulta selecciona todas las columnas de la tabla `client` donde la ciudad (`city`) es 'San Antonio' y el tipo de cliente (`type_of_client`) es 'VIP'.
 
-## 5. Listar eventos en San Francisco y fecha de manera ascendente
+## 5. Seleccionar productos que pertenecen a una categoría específica y cuyo precio está por encima de un valor específico
 
 ```sql
-SELECT * FROM event
-WHERE city = 'San Francisco'
-ORDER BY start_date ASC;
+SELECT * FROM product
+WHERE category = 'Electronics' AND price > 500;
 ```
 
 ![Imagen 5](capturas/5.jpg)
 
-Esta consulta selecciona todas las columnas de la tabla `event` donde la ciudad (`city`) es 'San Francisco'. Los resultados se ordenan de forma ascendente por la columna `start_date`.
+Esta consulta selecciona todas las columnas de la tabla `product` donde la categoría (`category`) es 'Electronics' y el precio (`price`) es mayor a 500.
+
+## 6. Seleccionar productos que fueron producidos en un año específico y en un país de origen específico
+
+```sql
+SELECT * FROM product
+WHERE EXTRACT(YEAR FROM year_of_production) = 2021 AND country_of_origin = 'USA';
+```
+
+![Imagen 6](capturas/6.jpg)
+
+Esta consulta selecciona todas las columnas de la tabla `product` donde el año de producción (`year_of_production`) es 2021 y el país de origen (`country_of_origin`) es 'USA'.
+
+## 7. Seleccionar clientes cuyo nombre completo comience con 'J'
+
+```sql
+SELECT * FROM client
+WHERE fullname LIKE 'J%';
+```
+
+![Imagen 7](capturas/7.jpg)
+
+Esta consulta selecciona todas las columnas de la tabla `client` donde el nombre completo (`fullname`) comienza con la letra 'J'.
+
+## 8. Seleccionar clientes cuya ciudad contenga la letra 'a'
+
+```sql
+SELECT * FROM client
+WHERE city LIKE '%a%';
+```
+
+![Imagen 8](capturas/8.jpg)
+
+Esta consulta selecciona todas las columnas de la tabla `client` donde la ciudad (`city`) contiene la letra 'a'.
